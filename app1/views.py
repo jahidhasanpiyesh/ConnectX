@@ -3,6 +3,7 @@ from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 # Index view
 def index(request):
@@ -52,3 +53,30 @@ def user_logout(request):
     logout(request)
     messages.success(request, 'You have been logged out successfully.')
     return redirect('login')
+
+# Dashboard view
+@login_required
+def dashboard(request):
+    full_name = f"{request.user.first_name} {request.user.last_name}".strip()
+    return render(request, 'dashboard.html', {'name': full_name})
+
+
+# Video call view
+@login_required
+def videocall(request):
+    full_name = f"{request.user.first_name} {request.user.last_name}".strip()
+    return render(request, 'videocall.html', {'name': full_name})
+
+
+# Join room view
+@login_required
+def join_room(request):
+    if request.method == 'POST':
+        roomID = request.POST.get('roomID', '').strip()
+        if roomID:
+            # Use named URL for meeting; adjust as needed
+            return redirect(f"/meeting?roomID={roomID}")
+        else:
+            messages.error(request, "Please enter a valid Room ID.")
+            return redirect('join_room')
+    return render(request, 'joinroom.html')

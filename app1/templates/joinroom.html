@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Room | ConnectX</title>
+  <link rel="stylesheet" href="{% static 'joinroom.css' %}">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-box">
+      <h1>Join a Meeting</h1>
+      <p class="subtitle">Enter the room ID to join an ongoing meeting.</p>
+
+      <form action="{% url 'join_room' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <input type="text" placeholder="Enter Room ID" name="roomID" required>
+        </div>
+        <button type="submit" class="btn">Join</button>
+      </form>
+
+      {% if success %}
+        <p style="color: #0f0; margin-top: 15px;"><b>{{ success }}</b></p>
+      {% endif %}
+      {% if error %}
+        <p style="color: #f00; margin-top: 15px;">{{ error }}</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

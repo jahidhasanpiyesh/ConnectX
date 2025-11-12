@@ -1,0 +1,100 @@
+/* Dashboard-style container for Join Room */
+.dashboard-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+}
+
+.dashboard-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Headings */
+.dashboard-box h1 {
+    color: #00E0FF;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #c9d6df;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* Form fields */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 5px #00E0FF;
+    background: rgba(255,255,255,0.15);
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    background: #00E0FF;
+    color: #0F2027;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #00B5CC;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,224,255,0.3);
+}
+
+/* Success/Error Messages */
+p {
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .dashboard-box {
+        padding: 35px 25px;
+    }
+    .dashboard-box h1 {
+        font-size: 1.6rem;
+    }
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    .form-group input,
+    .btn {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
