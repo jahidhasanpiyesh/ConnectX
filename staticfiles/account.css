@@ -1,0 +1,138 @@
+/* Full-screen Body */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container & Box for both Register & Login */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    animation: fadeIn 0.8s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Headings */
+.form-box h1 {
+    color: #00E0FF;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #c9d6df;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #c9d6df;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 5px #00E0FF;
+    background: rgba(255,255,255,0.15);
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    background: #00E0FF;
+    color: #0F2027;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00B5CC;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,224,255,0.3);
+}
+
+/* Links */
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #c9d6df;
+}
+
+.form-link a {
+    color: #00E0FF;
+    text-decoration: none;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fully Responsive Adjustments */
+@media (max-width: 500px) {
+    .form-box {
+        padding: 30px 20px;
+    }
+    .form-box h1 {
+        font-size: 1.6rem;
+    }
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    .form-group input {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
