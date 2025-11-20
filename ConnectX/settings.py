@@ -34,7 +34,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG =
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
