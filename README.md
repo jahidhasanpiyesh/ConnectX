@@ -1,4 +1,4 @@
-# ConnectX 🎥💬
+# Real-time audio, video & messaging communication platform --- ConnectX 🎥💬
 
 A modern, professional **video conferencing web application** built with Django. ConnectX allows users to create meetings, join rooms, and chat seamlessly — similar to Google Meet.
 
