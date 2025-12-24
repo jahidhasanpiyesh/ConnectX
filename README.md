@@ -175,10 +175,6 @@ ConnectX/
 Watch the ConnectX demo here:  
 [![Watch the demo](https://img.youtube.com/vi/<VIDEO_ID>/0.jpg)](https://www.youtube.com/watch?v=<VIDEO_ID>) -->
 
-## License 📄
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
 ## Contributing 🤝
@@ -188,6 +184,19 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Commit your changes (`git commit -m 'Add feature'`)  
 - Push to the branch (`git push origin feature-name`)  
 - Open a Pull Request  
+
+---
+## 🛡️ License
+
+This project is licensed under the **GNU General Public License v3.0**. 
+
+### ⚖️ Permissions under GPLv3:
+* **Commercial Use:** You can use this software for commercial purposes.
+* **Modification:** You can modify the code, but you must keep the source code open.
+* **Distribution:** You can distribute the original or modified code.
+* **Credit:** You must give credit to the original author (Md Jahid Hasan).
+
+See the [LICENSE](LICENSE) file for more details.
 
 ---
 
